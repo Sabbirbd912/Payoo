@@ -18,5 +18,12 @@ document.getElementById("cashout-btn").addEventListener("click", function() {
         alert("Invalid Amount!");
         return
     }
-    console.log("New Balance", newBalance);
+    const cashOutPinInput=document.getElementById("pin-cacshout");
+    const cashOutPin=cashOutPinInput.value;
+    if(cashOutPin.length === 4 && cashOutPin === "1234"){
+        alert("Cashout Successful!");
+        balanceElement.innerText = newBalance;
+    }else{
+        alert("Invalid Pin!");
+    }
 });
