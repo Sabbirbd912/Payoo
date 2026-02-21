@@ -38,7 +38,7 @@
     </style>
   </head>
   <body class="min-h-screen max-w-md bg-base-200 mx-auto">
-    <header class="border-b-2 border-gray-300">
+    <header class="border-b-2 border-gray-300 sticky top-0 bg-base-100 z-10">
       <section class="w-11/12 mx-auto py-3 flex justify-between items-center">
         <div class="left flex gap-1">
           <div class="logo w-[60px]">
@@ -109,15 +109,13 @@
               placeholder="Mobile Number 11 Digit"
               value="01234567890"
             />
-            <label class="label text-neutral font-bold">User Account</label>
+            <label class="label text-neutral font-bold">Withdraw Amount</label>
             <input
-              id="user-number"
+              id="amount-cashout"
               maxlength="11"
-              minlength="11"
-              type="text"
+              type="number" min="0"
               class="input rounded-full bg-base-200"
-              placeholder="Mobile Number 11 Digit"
-              value="01234567890"
+              placeholder="Expected Amount"
             />
             <label class="label">Password</label>
             <input
@@ -135,5 +133,6 @@
       </div>
     </section>
     <script src="assets/script/cashout.js"></script>
+    <script src="assets/script/machine.js"></script>
   </body>
 </html>
